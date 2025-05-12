@@ -1,0 +1,271 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #555;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Event Handling Section */
+#hoverDiv {
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation bonus */
+}
+
+#hoverDiv:hover {
+    background-color: lightcoral;
+    transform: scale(1.05); 
+}
+
+#keyPressOutput {
+    margin-top: 5px;
+    color: green;
+    font-weight: bold;
+}
+
+#secretActionDiv {
+    padding: 15px;
+    background-color: #f0e68c; /* Khaki */
+    border: 1px dashed #ccc;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px 0;
+    user-select: none; /* Prevent text selection during long press */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Interactive Elements Section */
+.color-button.blue { background-color: #007bff; }
+.color-button.red { background-color: #dc3545; }
+.color-button.green { background-color: #28a745; }
+.color-button.yellow { background-color: #ffc107; color: #333}
+
+
+.gallery-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#galleryImage {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease-in-out; /* Animation bonus for transform changes */
+}
+
+.galleryImage-animate {
+    transform: scale(1.05) rotate(2deg); /* The state it animates to */
+}
+
+.tabs-container {
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-buttons button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    animation: fadeIn 0.5s; 
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 5px;
+}
+
+.accordion-header {
+    background-color: #e7e7e7;
+    color: #444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #ccc;
+}
+
+.accordion-header::after { /* Plus/minus icon */
+    content: '\002B'; /* Unicode character for "+" sign */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-header.active::after {
+    content: "\2212"; /* Unicode character for "-" sign */
+}
+
+.accordion-content {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animation */
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+/* Form Validation Section */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: block; /* Changed from none to block to take space */
+    min-height: 1em; /* Reserve space to prevent layout shifts */
+    margin-top: 2px;
+}
+
+input.invalid {
+    border-color: red;
+    background-color: #ffecec;
+}
+
+input.valid {
+    border-color: green;
+    background-color: #e6ffe6;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #e6ffe6;
+    border: 1px solid green;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 30px;
+}

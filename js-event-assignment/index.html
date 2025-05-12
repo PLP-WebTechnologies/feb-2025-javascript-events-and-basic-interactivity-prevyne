@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Handling & Interactive Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactive Playground</h1>
+    </header>
+
+    <main>
+        <section id="event-handling">
+            <h2>1. Event Handling</h2>
+
+            <button id="clickMeBtn">Click Me!</button>
+            <div id="hoverDiv">Hover Over Me!</div>
+            <input type="text" id="keyPressInput" placeholder="Type here for keypress detection">
+            <p id="keyPressOutput"></p>
+            <div id="secretActionDiv">Double Click or Long Press Me for a Secret!</div>
+            <p id="secretMessage" class="hidden">Wow, you found the secret!</p>
+        </section>
+
+        <hr>
+
+        <section id="interactive-elements">
+            <h2>2. Interactive Elements</h2>
+
+            <button id="changeTextBtn">Change My Text</button>
+            <button id="changeColorBtn" class="color-button">Change My Color</button>
+
+            <h3>Image Gallery</h3>
+            <div class="gallery-container">
+                <img src="images/lonewolf.jpg" alt="Gallery Image 1" id="galleryImage">
+                <div class="gallery-controls">
+                    <button id="prevBtn">Previous</button>
+                    <button id="nextBtn">Next</button>
+                </div>
+            </div>
+
+            <h3>Tabs</h3>
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-link active" data-tab="tab1">Tab 1</button>
+                    <button class="tab-link" data-tab="tab2">Tab 2</button>
+                    <button class="tab-link" data-tab="tab3">Tab 3</button>
+                </div>
+                <div id="tab1" class="tab-content active">
+                    <p>This is the content of Tab 1. Welcome!</p>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <p>This is some different content for Tab 2.</p>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <p>And finally, the exciting content of Tab 3!</p>
+                </div>
+            </div>
+
+            <h3>Accordion</h3>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Accordion Section 1</button>
+                    <div class="accordion-content">
+                        <p>Content for section 1. It starts hidden and expands on click.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Accordion Section 2</button>
+                    <div class="accordion-content">
+                        <p>More amazing content for section 2. Isn't this interactive?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="form-validation">
+            <h2>3. Form Validation</h2>
+            <form id="myForm">
+                <div>
+                    <label for="username">Username (Required):</label>
+                    <input type="text" id="username" name="username" required>
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+                <div>
+                    <label for="email">Email (Required, valid format):</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div>
+                    <label for="password">Password (Required, min 8 chars):</label>
+                    <input type="password" id="password" name="password" required minlength="8">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                <div>
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+                <button type="submit">Submit Form</button>
+            </form>
+            <p id="formSuccessMessage" class="hidden success-message">Form submitted successfully!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>@okech</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
